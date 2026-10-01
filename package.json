@@ -79,7 +79,7 @@
     {
       "name": "nanoid",
       "import": "{ nanoid }",
-      "limit": "117 B"
+      "limit": "91 B"
     },
     {
       "name": "customAlphabet",

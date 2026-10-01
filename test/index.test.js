@@ -27,6 +27,23 @@ for (let type of ['node', 'browser']) {
       after(() => {
         Object.defineProperty(global, 'crypto', { value: undefined })
       })
+
+      test('packs random bytes into a Base64 URL ID', () => {
+        let original = crypto.getRandomValues
+        let calls = 0
+        crypto.getRandomValues = bytes => {
+          calls += 1
+          equal(bytes.length, 3)
+          bytes.set([251, 240, 0])
+          return bytes
+        }
+        try {
+          equal(nanoid(4), '-_AA')
+          equal(calls, 1)
+        } finally {
+          crypto.getRandomValues = original
+        }
+      })
     }
 
     test('is ready for 0 size', () => {
@@ -90,6 +107,9 @@ for (let type of ['node', 'browser']) {
       }, /Wrong ID size|Invalid typed array length/)
       throws(() => {
         nanoid(-10)
+      }, /Wrong ID size|Invalid typed array length/)
+      throws(() => {
+        nanoid(-1)
       }, /Wrong ID size|Invalid typed array length/)
       let a = nanoid()
       let b = nanoid()

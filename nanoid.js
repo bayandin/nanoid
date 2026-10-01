@@ -1,1 +1,1 @@
-let a="57X6y3wQZNzYjJB2L_10pxbackgroundhimselfUTF-8DEMOGRAPHICSVqvt4KW9";export let nanoid=(r=21)=>{for(var e="",t=crypto.getRandomValues(new Uint8Array(r|=0));r--;)e+=a[63&t[r]];return e};
+export let nanoid=(e=21)=>crypto.getRandomValues(new Uint8Array((e|=0)-(e>>2)||e)).toBase64({alphabet:"base64url"}).slice(0,e);
