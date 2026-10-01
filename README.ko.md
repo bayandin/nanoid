@@ -296,6 +296,10 @@ React 18에서 추가된 [`useId`] 를 추천합니다.
 
 ### React Native
 
+이 버전의 Nano ID에는
+[`Uint8Array.prototype.toBase64()`를 지원하는](https://github.com/facebook/hermes/commit/ddd420b995d0df98174b000b2d5ca6f8a42ddffb)
+새로운 Hermes 릴리스가 필요합니다. 이 지원이 포함된 Hermes 버전은 아직 출시되지 않았습니다.
+
 React Native에는 내장된 랜덤 생성기가 존재하지 않습니다.
 아래의 폴리필을 사용하면 순수 React Native와 Expo(`39`버전 이상) 환경에서
 Nano ID를 사용할 수 있습니다.
