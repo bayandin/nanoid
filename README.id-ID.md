@@ -226,6 +226,10 @@ const todoItems = todos.map((text, index) => (
 
 ### React Native
 
+Versi Nano ID ini memerlukan rilis Hermes yang lebih baru dengan
+[dukungan `Uint8Array.prototype.toBase64()`](https://github.com/facebook/hermes/commit/ddd420b995d0df98174b000b2d5ca6f8a42ddffb).
+Belum ada rilis Hermes yang menyertakan dukungan ini.
+
 React Native tidak memiliki _built-in random generator_. Digunakan polyfill seperti berikut yang berjalan untuk React Native dan Expo yang bermula dari versi `39.x`.
 
 1. Periksa dokumentasi [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values) dan install di aplikasi.

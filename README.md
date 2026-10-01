@@ -312,6 +312,10 @@ That hook was added in React 18.
 
 ### React Native
 
+This Nano ID version requires a newer Hermes release containing
+[`Uint8Array.prototype.toBase64()` support](https://github.com/facebook/hermes/commit/ddd420b995d0df98174b000b2d5ca6f8a42ddffb).
+No released Hermes version includes this support yet.
+
 React Native does not have built-in random generator. The following polyfill
 works for plain React Native and Expo starting with `39.x`.
 

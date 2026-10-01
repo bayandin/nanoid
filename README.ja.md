@@ -292,6 +292,10 @@ const todoItems = todos.map((text, index) => (
 
 ### React Native
 
+このバージョンの Nano ID には、
+[`Uint8Array.prototype.toBase64()` をサポートする](https://github.com/facebook/hermes/commit/ddd420b995d0df98174b000b2d5ca6f8a42ddffb)
+新しい Hermes リリースが必要です。このサポートを含む Hermes はまだリリースされていません。
+
 React Nativeには組み込みのランダム生成器がありません。次のポリフィルは
 プレーンなReact NativeとExpo（`39.x`以降）で動作します。
 

@@ -296,6 +296,10 @@ function Todos({ todos }) {
 
 ### React Native
 
+Для этой версии Nano ID требуется более новая версия Hermes с
+[поддержкой `Uint8Array.prototype.toBase64()`](https://github.com/facebook/hermes/commit/ddd420b995d0df98174b000b2d5ca6f8a42ddffb).
+Релиз Hermes с этой поддержкой пока не выпущен.
+
 React Native не имеет встроенного аппаратного генератора случайных чисел.
 Полифил ниже работает в чистом React Native и в Expo начиная с версии 39.
 

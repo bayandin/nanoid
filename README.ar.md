@@ -374,6 +374,10 @@ labels وحقول الإدخال، يُنصح باستخدام [`useId`].
 
 ### React Native
 
+يتطلب هذا الإصدار من Nano ID إصدارًا أحدث من Hermes يتضمن
+[دعم `Uint8Array.prototype.toBase64()`](https://github.com/facebook/hermes/commit/ddd420b995d0df98174b000b2d5ca6f8a42ddffb).
+لا يتضمن أي إصدار منشور من Hermes هذا الدعم حتى الآن.
+
 لا يحتوي React Native على مُولِّد أرقام عشوائية مدمج. يعمل البوليفِل التالي
 مع React Native العادي و Expo بدءًا من الإصدار `39.x`.
 
